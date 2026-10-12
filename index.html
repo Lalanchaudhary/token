@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090807">
+  <meta name="description" content="Book your next experience at TOKEN11 STUDIO and enjoy 12% off your first booking.">
+  <title>TOKEN11 STUDIO — 12% off your first booking</title>
+  <style>
+    :root { color-scheme: dark; --gold:#f7bd38; --cream:#fff1c0; --red:#a80d13; --ink:#090807; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; min-height:100vh; color:#fff; background:var(--ink); font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    a { color:inherit; }
+    .page { min-height:100vh; overflow:hidden; position:relative; background:radial-gradient(ellipse at 50% 68%, #44220a 0, #17100b 34%, #090807 70%); }
+    .page:before,.page:after { content:""; position:absolute; pointer-events:none; }
+    .page:before { inset:16px; border:1px solid rgba(244,177,43,.38); clip-path:polygon(0 0, 36% 0, 50% 8%, 64% 0, 100% 0, 100% 100%, 0 100%); }
+    .page:after { width:110vw;height:70vw; max-height:740px; left:50%; bottom:-48%; transform:translateX(-50%); border:1px solid rgba(255,176,33,.3); border-radius:50%; box-shadow:0 0 60px rgba(240,145,13,.09), inset 0 0 50px rgba(240,145,13,.06); }
+    header { position:relative; z-index:1; display:flex; justify-content:space-between; align-items:center; max-width:1160px; margin:auto; padding:30px 32px; }
+    .brand { display:flex; gap:11px; align-items:center; font-size:13px; font-weight:800; letter-spacing:.2em; }
+    .brand-mark { display:grid; place-items:center; width:34px;height:34px; border:1px solid var(--gold); transform:rotate(45deg); color:var(--gold); font-family:Georgia,serif; font-size:18px; }
+    .brand-mark span { transform:rotate(-45deg); }
+    .nav-link { text-decoration:none; text-transform:uppercase; letter-spacing:.13em; font-size:11px; color:var(--cream); border-bottom:1px solid var(--gold); padding:8px 0; }
+    main { position:relative; z-index:1; min-height:calc(100vh - 100px); display:grid; place-items:center; padding:36px 22px 70px; }
+    .hero { width:min(100%, 780px); text-align:center; }
+    .eyebrow { display:flex; align-items:center; justify-content:center; gap:13px; color:var(--gold); font-size:10px; letter-spacing:.32em; text-transform:uppercase; }
+    .eyebrow:before,.eyebrow:after { content:""; width:44px;height:1px; background:linear-gradient(90deg,transparent,var(--gold)); }
+    .eyebrow:after { transform:scaleX(-1); }
+    h1 { margin:25px 0 4px; font-family:Georgia,"Times New Roman",serif; font-size:clamp(38px, 8vw, 82px); line-height:.95; letter-spacing:.035em; font-weight:700; color:#ffe8a0; background:linear-gradient(180deg,#fff8d5 3%,#ffe679 35%,#efa91c 68%,#fff0a9 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; filter:drop-shadow(0 4px 0 #6c2909) drop-shadow(0 12px 18px #000); }
+    .studio { margin:15px 0 0; text-transform:uppercase; font-size:12px; letter-spacing:.5em; color:#f6e7c5; }
+    .rule { width:min(80%,430px); margin:27px auto 23px; height:1px; background:linear-gradient(90deg,transparent,#b66c15,var(--gold),#b66c15,transparent); position:relative; }
+    .rule:after { content:"◆"; position:absolute; top:50%;left:50%; transform:translate(-50%,-50%) rotate(45deg); color:var(--gold); font-size:10px; background:#1a1009; padding:0 10px; }
+    .offer-label { margin:0 0 7px; color:#fff3d0; text-transform:uppercase; letter-spacing:.22em; font-size:12px; }
+    .discount { display:flex; align-items:center; justify-content:center; line-height:.9; margin:10px 0 18px; color:#ffd85f; text-shadow:0 4px 0 #792408,0 9px 0 #380d09,0 15px 32px #000; }
+    .discount strong { font-family:Georgia,"Times New Roman",serif; font-weight:800; font-size:clamp(105px, 23vw, 220px); letter-spacing:-.08em; background:linear-gradient(#fff7b6 5%,#ffc62e 45%,#f58a13 74%,#fff19a); color:transparent; -webkit-background-clip:text; background-clip:text; }
+    .discount span { font-family:Georgia,serif; font-size:clamp(42px, 10vw, 88px); align-self:flex-start; margin:12px 0 0 9px; color:#ffe078; }
+    .off { display:inline-block; background:linear-gradient(110deg,#870a0c,#e22017,#8d090b); border:1px solid #ffc34b; padding:10px 24px; margin-top:2px; font-size:17px; font-weight:900; letter-spacing:.2em; box-shadow:0 5px 0 #380908,0 10px 24px #0008; transform:skew(-7deg); }
+    .whatsapp { display:flex; width:max-content; min-height:46px; align-items:center; justify-content:center; gap:10px; margin:18px auto 0; padding:0 22px; border:1px solid #5ee28a; border-radius:4px; background:linear-gradient(135deg,#1cbd62,#078c4a); color:#fff; text-decoration:none; text-transform:uppercase; font-size:11px; font-weight:850; letter-spacing:.11em; box-shadow:0 6px 22px #0b9b5140; transition:transform .2s,filter .2s; }
+    .whatsapp:hover { transform:translateY(-2px); filter:brightness(1.1); }
+    .whatsapp svg { width:19px; height:19px; fill:currentColor; }
+    .copy { max-width:440px; margin:27px auto 24px; color:#d1c5af; font-size:14px; line-height:1.7; }
+    .cta { display:inline-flex; min-height:51px; align-items:center; justify-content:center; gap:13px; padding:0 26px; background:linear-gradient(135deg,#ffe68b,#e8a629 58%,#b96d14); color:#1a0c05; text-decoration:none; text-transform:uppercase; font-size:11px; font-weight:900; letter-spacing:.16em; border:1px solid #fff0b4; box-shadow:0 8px 26px #cc751c33; transition:transform .2s,filter .2s; }
+    .cta:hover { transform:translateY(-2px); filter:brightness(1.12); }
+    .cta span { font-size:18px; }
+    .fine { margin:18px 0 0; color:#978b75; font-size:10px; letter-spacing:.08em; }
+    footer { position:absolute; z-index:1; bottom:24px; width:100%; text-align:center; color:#88775e; font-size:9px; letter-spacing:.24em; text-transform:uppercase; }
+    @media (max-width:560px) { header { padding:23px 22px; } .brand { font-size:10px; letter-spacing:.14em; }.brand-mark { width:29px;height:29px; }.nav-link { font-size:9px; } main { padding-top:24px; padding-bottom:65px; } .studio { letter-spacing:.34em; } .copy { font-size:13px; } footer { bottom:15px; font-size:8px; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*:before,*:after { transition:none !important; } }
+  </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LPLDBWV5SL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LPLDBWV5SL');
+</script>
+<!-- Event snippet for Outbound click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18319778050/h6x0CNzxjpodEILCxp9E',
+      'value': 1.0,
+      'currency': 'INR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a class="brand" href="#top" aria-label="TOKEN11 Studio home"><span class="brand-mark"><span>♛</span></span><span>TOKEN11 STUDIO</span></a>
+      <a class="nav-link" href="#book">Reserve your date</a>
+    </header>
+    <main id="top">
+      <section class="hero" aria-labelledby="title">
+        <div class="eyebrow">A royal welcome awaits</div>
+        <h1 id="title">TOKEN11</h1>
+        <p class="studio">Studio</p>
+        <div class="rule"></div>
+        <p class="offer-label">Your first booking comes with</p>
+        <div class="discount" aria-label="12 percent"><strong>12</strong><span>%</span></div>
+        <div class="off">OFF</div>
+        <a class="whatsapp" href="https://wa.me/919279699826?text=I%20WANT%20ID%20HERE.." target="_blank" rel="noopener noreferrer" aria-label="Message TOKEN11 Studio on WhatsApp" onclick="return gtag_report_conversion(this.href)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.5 0 .15 5.35.15 11.93c0 2.1.55 4.16 1.6 5.97L.05 24l6.26-1.64a11.9 11.9 0 0 0 5.76 1.47h.01c6.58 0 11.93-5.35 11.93-11.93a11.86 11.86 0 0 0-3.49-8.42ZM12.08 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.72.98.99-3.63-.24-.37a9.86 9.86 0 0 1-1.52-5.26c0-5.47 4.45-9.92 9.93-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.91 7.02c0 5.48-4.45 9.93-9.92 9.93Zm5.45-7.43c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.8-1.49-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.66-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.06 2.89 1.2 3.09c.15.2 2.1 3.2 5.08 4.48.71.31 1.27.5 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
+          Book on WhatsApp
+        </a>
+        <p class="copy">Make your first visit one to remember. Enjoy an exclusive 12% discount when you book with TOKEN11 Studio.</p>
+        <a class="cta" id="book" href="mailto:hello@TOKEN11studio.com?subject=My%20first%20booking">Book your first visit <span aria-hidden="true">→</span></a>
+        <p class="fine">New bookings only · Offer applied to your first appointment</p>
+      </section>
+    </main>
+    <footer>Make it memorable · TOKEN11 STUDIO</footer>
+  </div>
+</body>
+</html>
